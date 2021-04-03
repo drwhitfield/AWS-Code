@@ -1,7 +1,9 @@
 #!/usr/bin/python
 
 """
-Simple Script to Print a Listing of AWS S3 Buckets
+
+Simple Script to Create A Set of AWS S3 Buckets
+
 """
 
 __author__    = ' Donald R. Whitfield'
