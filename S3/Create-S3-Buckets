@@ -1,0 +1,21 @@
+#!/usr/bin/python
+
+"""
+Simple Script to Print a Listing of AWS S3 Buckets
+"""
+
+__author__    = ' Donald R. Whitfield'
+__copyright__ = 'S-Box Security, LLC'
+__email__     = 'donaldwhitfield@icloud.com'
+__status__    = 'Development'
+
+
+import boto3
+
+def CreateBuckets():
+    NewS3Bucket1 = s3.create_bucket(Bucket='pils-new-test-bucket-10', CreateBucketConfiguration = {'LocationConstraint': 'eu-central-1'})
+    NewS3Bucket2 = s3.create_bucket(Bucket='pils-new-test-bucket-20', CreateBucketConfiguration = {'LocationConstraint': 'eu-central-1'})
+    NewS3Bucket3 = s3.create_bucket(Bucket='pils-new-test-bucket-30', CreateBucketConfiguration = {'LocationConstraint': 'eu-central-1'})
+    
+if __name__ == '__main__':
+    CreateBuckets()
