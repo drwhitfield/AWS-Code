@@ -6,10 +6,10 @@ Simple Script to Print a Listing of AWS S3 Buckets
 
 """
 
-__author__= ' Donald R. Whitfield'
-__copyright__= 'S-Box Security, LLC'
-__email__ = 'donaldwhitfield@icloud.com'
-__status__ = 'Development'
+__author__    = ' Donald R. Whitfield'
+__copyright__ = 'S-Box Security, LLC'
+__email__     = 'donaldwhitfield@icloud.com'
+__status__    = 'Development'
 
 
 import boto3
