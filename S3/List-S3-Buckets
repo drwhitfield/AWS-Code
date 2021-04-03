@@ -1,0 +1,31 @@
+#!/usr/bin/python
+
+"""
+
+Simple Script to Print a Listing of AWS S3 Buckets
+
+"""
+
+__author__= ' Donald R. Whitfield'
+__copyright__= 'S-Box Security, LLC'
+__email__ = 'donaldwhitfield@icloud.com'
+__status__ = 'Development'
+
+
+import boto3
+
+
+session = boto3.Session(profile_name='default')
+s3 = session.resource('s3')
+
+
+def ListBuckets():
+    'Print A Listing of All S3 Buckets'
+    
+    for bucket in s3.buckets.all():
+        print(bucket)
+        
+if __name__ == '__main__':
+    ListBuckets()
+    
+    
