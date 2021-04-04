@@ -3,6 +3,7 @@
 """
 
 Script to Create New EC2 Instance
+A Security Group is Assigned to Instance
 Prints Instance ID After Running
 
 """
@@ -22,7 +23,8 @@ def Create_Instance():
         MinCount=1,
         MaxCount=1,
         InstanceType="t2.micro",
-        KeyName="ec2-key-pair"
+        KeyName="ec2-key-pair",
+        SecurityGroupIds=['HSB_SECURITY_GROUP']
     )
 
     print(instances["Instances"][0]["InstanceId"])
