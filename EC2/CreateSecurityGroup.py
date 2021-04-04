@@ -3,7 +3,7 @@
 """
 
 Simple Script to Create New AWS EC2 Security Group
-Specifically for Externally Facing Services Over Ports 80,443
+Specifically for Externally Facing Services Over Ports 22,80, and 443
 
 """
 
@@ -40,6 +40,10 @@ def CreateSecurityGroup():
                 {'IpProtocol': 'tcp',
                  'FromPort': 443,
                  'ToPort': 443,
+                 'IpRanges': [{'CidrIp': '0.0.0.0/0'}]},
+                {'IpProtocol': 'tcp',
+                 'FromPort': 22,
+                 'ToPort': 22,
                  'IpRanges': [{'CidrIp': '0.0.0.0/0'}]}
             ])
     
